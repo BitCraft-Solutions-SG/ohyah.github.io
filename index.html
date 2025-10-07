@@ -331,19 +331,24 @@
             animation: fadeInUp 0.8s ease-out;
         }
 
-        .video-placeholder {
-            margin: 40px 0;
-            text-align: center;
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 40px auto;
         }
 
-        .video-placeholder h3 {
-            margin-bottom: 20px;
-            font-size: 1.4rem;
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
 
-        .video-placeholder p {
-            opacity: 0.8;
-        }
     </style>
 </head>
 
@@ -359,9 +364,16 @@
                     focused routines and consistent completion. Perfect for children ages 5-12.
                 </p>
 
-                <div class="video-placeholder">
+                <div class="video-container">
                     <h3>🎥 App Demo Video</h3>
-                    <iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/4Ez94byCT2M?si=kKVdTuqiX8rRTCW3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/4Ez94byCT2M?si=kKVdTuqiX8rRTCW3"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
                 </div>
 
                 <a href="https://apps.apple.com/us/app/oh-yah-daily-routines/id6749888502" target="_blank">
